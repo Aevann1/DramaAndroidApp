@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Drama</string>
+    <string name="url">Url</string>
+    <string name="options">options</string>
+    <string name="refresh">Refresh</string>
+    <string name="cancel">Cancel</string>
+    <string name="open_in_external_browser">Open in external browser</string>
+    <string name="copy_url">Copy URL</string>
+    <string name="errorHandlerOutputText">Service Unavailable</string>
+    <string name="copy_error">Copy Error</string>
+    <string name="error">ERROR</string>
+    <string name="logo_image">logo image</string>
+</resources>
