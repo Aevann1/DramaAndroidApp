@@ -317,7 +317,7 @@ public class MainActivity extends Activity {
             String extra_url = getIntent().getStringExtra("url");
             if (extra_url.startsWith("/")) myurl += extra_url;
         }
-        mWebview.loadUrl(myurl);
+        mWebview.loadUrl(myurl.replace("http://","https://"));
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
             mWebview.reload();
