@@ -88,7 +88,8 @@ public class MainActivity extends Activity {
             "rdrama.ga",
             "rdrama.net",
             "freeghettohoes.biz",
-            "old.rdrama.net"
+            "old.rdrama.net",
+            "rdrama.com"
     };
 
     private WebView mWebview;
@@ -313,7 +314,8 @@ public class MainActivity extends Activity {
         Bundle extras = getIntent().getExtras();
 
         if (extras != null) {
-            myurl = getIntent().getStringExtra("url");
+            String extra_url = getIntent().getStringExtra("url");
+            if (extra_url.startsWith("/")) myurl += extra_url;
         }
         mWebview.loadUrl(myurl);
 
