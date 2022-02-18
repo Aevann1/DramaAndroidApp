@@ -85,11 +85,17 @@ public class MainActivity extends Activity {
     String DownloadImageURL;
     String myurl = "https://rdrama.net";
     String[] supported_urls = {
-            "rdrama.ga",
             "rdrama.net",
             "freeghettohoes.biz",
             "old.rdrama.net",
-            "rdrama.com"
+            "www.rdrama.net",
+            "rdrama.com",
+            "rdrama.ga",
+            "devrama.xyz",
+            "ruqqus.us",
+            "ruqqus.ga",
+            "ruqqus.xyz",
+            "2much4you.net",
     };
 
     private WebView mWebview;
