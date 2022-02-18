@@ -86,16 +86,23 @@ public class MainActivity extends Activity {
     String myurl = "https://rdrama.net";
     String[] supported_urls = {
             "rdrama.net",
-            "freeghettohoes.biz",
-            "old.rdrama.net",
             "www.rdrama.net",
+            "old.rdrama.net",
+            "freeghettohoes.biz",
             "rdrama.com",
+            "www.rdrama.com",
             "rdrama.ga",
+            "www.rdrama.ga",
             "devrama.xyz",
+            "www.devrama.xyz",
             "ruqqus.us",
+            "www.ruqqus.us",
             "ruqqus.ga",
+            "www.ruqqus.ga",
             "ruqqus.xyz",
+            "www.ruqqus.xyz",
             "2much4you.net",
+            "www.2much4you.net"
     };
 
     private WebView mWebview;
