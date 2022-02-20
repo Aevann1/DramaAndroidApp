@@ -324,12 +324,10 @@ public class MainActivity extends Activity {
             }
         });
 
-        Bundle extras = getIntent().getExtras();
-
-        if (extras != null) {
-            String extra_url = getIntent().getStringExtra("url");
-            if (extra_url.startsWith("/")) myurl += extra_url;
+        if (getIntent().getExtras() != null) {
+            if (getIntent().getStringExtra("url").startsWith("/")) myurl += getIntent().getStringExtra("url");
         }
+        
         mWebview.loadUrl(myurl.replace("http://","https://"));
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
