@@ -324,8 +324,8 @@ public class MainActivity extends Activity {
             }
         });
 
-        if (getIntent().getExtras() != null) {
-            if (getIntent().getStringExtra("url").startsWith("/")) myurl += getIntent().getStringExtra("url");
+        if (getIntent().getStringExtra("url") != null && getIntent().getStringExtra("url").startsWith("/")) {
+            myurl += getIntent().getStringExtra("url");
         }
         
         mWebview.loadUrl(myurl.replace("http://","https://"));
