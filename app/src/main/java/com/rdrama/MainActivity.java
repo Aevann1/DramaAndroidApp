@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
         /** Subscribe to notifications */
         @JavascriptInterface
         public void Subscribe(String uid) {
-            PushNotifications.start(getApplicationContext(), "09c01ace-e333-4766-9ce8-07a2d0d032a7");
+            PushNotifications.start(getApplicationContext(), "59b2d753-132b-43fd-9dd9-a88db8134a3d");
             PushNotifications.addDeviceInterest(uid);
         }
     }
@@ -284,7 +284,8 @@ public class MainActivity extends Activity {
                 }
                 Intent contentSelectionIntent = new Intent(Intent.ACTION_GET_CONTENT);
                 contentSelectionIntent.addCategory(Intent.CATEGORY_OPENABLE);
-                contentSelectionIntent.setType("image/*, video/*");
+                contentSelectionIntent.setType("*/*");
+                contentSelectionIntent.putExtra(Intent.EXTRA_MIME_TYPES, new String[] {"image/*", "video/*"});
                 Intent[] intentArray;
                 if (takePictureIntent != null) {
                     intentArray = new Intent[]{takePictureIntent};
@@ -293,7 +294,7 @@ public class MainActivity extends Activity {
                 }
                 Intent chooserIntent = new Intent(Intent.ACTION_CHOOSER);
                 chooserIntent.putExtra(Intent.EXTRA_INTENT, contentSelectionIntent);
-                chooserIntent.putExtra(Intent.EXTRA_TITLE, "Image Chooser");
+                chooserIntent.putExtra(Intent.EXTRA_TITLE, "Image/Video Chooser");
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, intentArray);
 
                 startActivityForResult(chooserIntent, REQUEST_CODE_LOLIPOP);
