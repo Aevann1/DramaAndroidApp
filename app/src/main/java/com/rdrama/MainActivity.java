@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
         /** Subscribe to notifications */
         @JavascriptInterface
         public void Subscribe(String uid) {
-            PushNotifications.start(getApplicationContext(), "59b2d753-132b-43fd-9dd9-a88db8134a3d");
+            PushNotifications.start(getApplicationContext(), "09c01ace-e333-4766-9ce8-07a2d0d032a7");
             PushNotifications.addDeviceInterest(uid);
         }
     }
@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
                 Environment.DIRECTORY_PICTURES);
         return File.createTempFile(
                 imageFileName,  /* prefix */
-                ".jpg",         /* suffix */
+                ".png",         /* suffix */
                 storageDir      /* directory */
         );
     }
