@@ -36,7 +36,6 @@ import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.artjimlop.altex.AltexImageDownloader;
 
 import java.io.File;
@@ -108,7 +107,6 @@ public class MainActivity extends Activity {
     private WebView mWebview;
     private ProgressBar progressBar;
     private ImageView logo;
-    SwipeRefreshLayout swipeRefreshLayout;
 
     public static File createImageFile() throws IOException {
         // Create an image file name
@@ -151,7 +149,6 @@ public class MainActivity extends Activity {
         progressBar = findViewById(R.id.progressBar);
         mWebview = findViewById(R.id.webView);
         mWebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-        swipeRefreshLayout = findViewById(R.id.swipe);
 
         if (!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
         {
@@ -330,11 +327,6 @@ public class MainActivity extends Activity {
         }
         
         mWebview.loadUrl(myurl.replace("http://","https://"));
-
-        swipeRefreshLayout.setOnRefreshListener(() -> {
-            mWebview.reload();
-            swipeRefreshLayout.setRefreshing(false);
-        });
     }
 
     protected void onNewIntent(Intent intent) {
