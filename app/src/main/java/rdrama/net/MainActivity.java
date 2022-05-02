@@ -493,7 +493,7 @@ public class MainActivity extends Activity {
 
     public void downloadImage() {
         if (URLUtil.isValidUrl(DownloadImageURL)) {
-            AltexImageDownloader.writeToDisk(getApplicationContext(), DownloadImageURL, "drama");
+            AltexImageDownloader.writeToDisk(getApplicationContext(), DownloadImageURL, "rdrama");
 
 
                                /* DownloadManager.Request request = new DownloadManager.Request(Uri.parse(DownloadImageURL));
