@@ -38,6 +38,7 @@
                 <data android:host="old.rdrama.net"/>
 
                 <data android:host="freeghettohoes.biz"/>
+                <data android:host="www.freeghettohoes.biz"/>
 
                 <data android:host="rdrama.com"/>
                 <data android:host="www.rdrama.com"/>
@@ -59,6 +60,18 @@
 
                 <data android:host="2much4you.net"/>
                 <data android:host="www.2much4you.net"/>
+
+                <data android:host="pcmemes.net"/>
+                <data android:host="www.pcmemes.net"/>
+
+                <data android:host="chapotraphouse.club"/>
+                <data android:host="www.chapotraphouse.club"/>
+
+                <data android:host="cringetopia.org"/>
+                <data android:host="www.cringetopia.org"/>
+
+                <data android:host="watchpeopledie.co"/>
+                <data android:host="www.watchpeopledie.co"/>
             </intent-filter>
         </activity>
     </application>
