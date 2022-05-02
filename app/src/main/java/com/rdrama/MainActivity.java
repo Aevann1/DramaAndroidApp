@@ -1,4 +1,4 @@
-package com.rdrama;
+package rdrama.net;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

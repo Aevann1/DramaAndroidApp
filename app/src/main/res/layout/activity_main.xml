@@ -33,8 +33,8 @@
         android:layout_height="3dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:progressTint="#ff66ac"
-        android:progressBackgroundTint="#272727"
+        android:progressTint="#ffffff"
+        android:progressBackgroundTint="#000000"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
