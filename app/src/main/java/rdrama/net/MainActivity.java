@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
         /** Subscribe to notifications */
         @JavascriptInterface
         public void Subscribe(String uid) {
-            PushNotifications.start(getApplicationContext(), "09c01ace-e333-4766-9ce8-07a2d0d032a7");
+            PushNotifications.start(getApplicationContext(), "00bb6d59-7b11-4339-b1ae-b1f1259d1316");
             PushNotifications.addDeviceInterest(uid);
         }
     }
