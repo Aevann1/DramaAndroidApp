@@ -171,11 +171,11 @@ public class MainActivity extends Activity {
 
 		if (CheckNetwork.isInternetAvailable(this))
 		{
-			webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+			mWebview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 		}
 		else
 		{
-			webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);		
+			mWebview.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		}
 
 		registerForContextMenu(mWebview);
