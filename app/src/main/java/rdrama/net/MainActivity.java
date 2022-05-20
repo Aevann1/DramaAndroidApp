@@ -157,29 +157,7 @@ public class MainActivity extends Activity {
 		mWebview = findViewById(R.id.webView);
 		mWebview.addJavascriptInterface(new WebAppInterface(this), "Android");
 
-		if (!CheckNetwork.isInternetAvailable(this)) //returns true if internet available
-		{
-			//if there is no internet do this
-			//setContentView(R.layout.activity_main);
-
-			new AlertDialog.Builder(this) //alert the person knowing they are about to close
-					.setTitle("You need an internet connection to use this app")
-					.setMessage("Check to see if you're mobile data is on or you are connected to a wi-fi network.")
-					.setPositiveButton("Close app", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							finish();
-						}
-					})
-					.setNeutralButton("Okay", null)
-					.show();
-		}
-
 		mWebview.getSettings().setDomStorageEnabled(true);
-		mWebview.getSettings().setAppCachePath(getCacheDir().getPath());
-		mWebview.getSettings().setAppCacheEnabled(true);
-		mWebview.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-
 		mWebview.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
 		mWebview.getSettings().setAllowFileAccess(true);
 		mWebview.getSettings().setAllowContentAccess(true);
