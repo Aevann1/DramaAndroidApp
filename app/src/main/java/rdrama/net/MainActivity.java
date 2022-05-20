@@ -137,7 +137,6 @@ public class MainActivity extends Activity {
 
 		if (url_from_browser_activity != null) {
 			myurl = url_from_browser_activity;
-
 		}
 
 		handleIntent(getIntent());
@@ -151,13 +150,14 @@ public class MainActivity extends Activity {
 			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 		}
 
-
 		logo = findViewById(R.id.imageView);
 		progressBar = findViewById(R.id.progressBar);
 		mWebview = findViewById(R.id.webView);
 		mWebview.addJavascriptInterface(new WebAppInterface(this), "Android");
 
 		mWebview.getSettings().setDomStorageEnabled(true);
+		mWebview.getSettings().setAppCachePath(getCacheDir().getPath());
+		mWebview.getSettings().setAppCacheEnabled(true);
 		mWebview.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
 		mWebview.getSettings().setAllowFileAccess(true);
 		mWebview.getSettings().setAllowContentAccess(true);
@@ -168,6 +168,15 @@ public class MainActivity extends Activity {
 		mWebview.getSettings().setJavaScriptEnabled(true);
 		mWebview.getSettings().setBuiltInZoomControls(true);
 		mWebview.getSettings().setDisplayZoomControls(false);
+
+		if (CheckNetwork.isInternetAvailable(this))
+		{
+			webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+		}
+		else
+		{
+			webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);		
+		}
 
 		registerForContextMenu(mWebview);
 
