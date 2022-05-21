@@ -37,26 +37,11 @@
 				<data android:host="www.rdrama.net"/>
 				<data android:host="old.rdrama.net"/>
 
-				<data android:host="freeghettohoes.biz"/>
-				<data android:host="www.freeghettohoes.biz"/>
-
 				<data android:host="rdrama.com"/>
 				<data android:host="www.rdrama.com"/>
 
 				<data android:host="rdrama.ga"/>
 				<data android:host="www.rdrama.ga"/>
-
-				<data android:host="devrama.xyz"/>
-				<data android:host="www.devrama.xyz"/>
-
-				<data android:host="ruqqus.ga"/>
-				<data android:host="www.ruqqus.ga"/>
-
-				<data android:host="ruqqus.xyz"/>
-				<data android:host="www.ruqqus.xyz"/>
-
-				<data android:host="2much4you.net"/>
-				<data android:host="www.2much4you.net"/>
 
 				<data android:host="pcmemes.net"/>
 				<data android:host="www.pcmemes.net"/>
